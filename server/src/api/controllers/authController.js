@@ -8,7 +8,7 @@ const loginController = async (req, res) => {
     }
   } catch (err) {
     console.log(err);
-    res.status(401).json({ errors: [err.message] });
+    res.status(401).json({ errors: [err.message.split(",")] });
   }
 };
 const signupController = async (req, res) => {
@@ -23,7 +23,7 @@ const signupController = async (req, res) => {
       token: user.token,
     });
   } catch (err) {
-    res.status(401).json({ errors: [err.message] });
+    res.status(401).json({ errors: [err.message.split(",")] });
   }
 };
 

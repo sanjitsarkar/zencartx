@@ -1,2 +1,3 @@
 const authRoutes = require("./authRoutes");
-module.exports = { authRoutes };
+const categoryRoutes = require("./categoryRoutes");
+module.exports = { authRoutes, categoryRoutes };
